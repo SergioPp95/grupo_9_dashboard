@@ -31,7 +31,6 @@ function ProductList(){
 	
 	return(
 		<div className="container-fluid">
-					<TopBar />	
 					<div className="row">
 						<div className="col-12">
 						</div>

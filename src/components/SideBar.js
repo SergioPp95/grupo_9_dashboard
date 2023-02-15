@@ -8,6 +8,7 @@ import NotFound from './NotFound';
 import ProductList from './ProductList';
 import { useState, useEffect } from 'react';
 import {Link, Route, Switch} from 'react-router-dom';
+import TopBar from './TopBar';
 
 function SideBar(){
     const [users, setUsers] = useState()
@@ -60,7 +61,7 @@ function SideBar(){
                 <li className="nav-item">
                 <Link className="nav-link" to="/CategoriesInDb">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Categories</span>
                     </Link>
                 </li>
 
@@ -75,7 +76,13 @@ function SideBar(){
                 <li className="nav-item nav-link">
                 <Link className="nav-link" to="/ContentRowData">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
+                        <span>Tickets</span></Link>
+                </li>
+
+                <li className="nav-item nav-link">
+                <Link className="nav-link" to="/LastProductInDB">
+                        <i className="fas fa-cookie-bite"></i>
+                        <span>Last product</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -86,16 +93,31 @@ function SideBar(){
                     <ContentWrapper infoUsers={users} infoProducts={infoProducts}/>
                 </Route>
                 <Route path="/CategoriesInDB">
-                    <CategoriesInDB infoProducts={infoProducts}/>
+                    <div>
+                        <TopBar infoUsers={users}/>
+                        <CategoriesInDB infoProducts={infoProducts}/>
+                    </div>
                 </Route>
                 <Route path="/LastProductInDB">
-                    <LastProductInDB infoProducts={infoProducts}/>
+                    <div>
+                        <TopBar infoUsers={users}/>
+                        <LastProductInDB infoProducts={infoProducts}/>
+                    </div>
                 </Route>
                 <Route path="/ContentRowData">
-                    <ContentRowData infoUsers={users} infoProducts={infoProducts} />
+
+                    <div>
+                        <TopBar infoUsers={users}/>
+                        <ContentRowData infoUsers={users} infoProducts={infoProducts} />
+                    </div>
+                    
                 </Route>
                 <Route path="/ProductList">
+                    <div>
+                    <TopBar infoUsers={users}/>
                     <ProductList />
+                    </div>
+                    
                 </Route>
                 <Route component={NotFound} />
             </Switch>
