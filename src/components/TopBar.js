@@ -7,7 +7,7 @@ function TopBar({infoUsers}){
 		let userImg = infoUsers.users.map(user => user.picture)
 		return(
 			<React.Fragment>
-				{console.log(userName, userImg)}
+				
 					{/*<!-- Topbar -->*/}
 					<nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 	

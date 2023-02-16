@@ -32,7 +32,7 @@ function SideBar(){
     return(
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-dark sidebar sidebar-dark accordion" style={{color: 'black'}} id="accordionSidebar">
+            <ul className="navbar-nav bg-dark sidebar sidebar-dark accordion" style={{backgroundolor: 'black'}} id="accordionSidebar">
 
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center"  href="/">

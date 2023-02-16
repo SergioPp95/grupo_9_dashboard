@@ -19,7 +19,7 @@ function ProductList(){
 			setProducts([])
 		}
 	}
-	console.log(products)
+	//console.log(products)
 	
 
 	

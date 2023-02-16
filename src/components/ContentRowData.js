@@ -11,7 +11,7 @@ import SmallCard from './SmallCard';
 
 function ContentRowData({infoUsers, infoProducts}){  
     if(infoUsers != undefined && infoProducts != undefined){
-        console.log(infoUsers)
+        //console.log(infoUsers)
         let productsInDB = {
             title: 'Products in Data Base',
             color: 'primary', 

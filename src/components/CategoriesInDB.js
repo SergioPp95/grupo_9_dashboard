@@ -3,7 +3,7 @@ import React from "react";
 function CategoriesInDB({infoProducts}) {
   
   if(infoProducts != undefined){
-    console.log(Object.keys(infoProducts.countByCategory))
+    //console.log(Object.keys(infoProducts.countByCategory))
     return (
       <div className="col-lg-6 mb-4">
         <div className="card shadow mb-4">
